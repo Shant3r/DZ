@@ -12,9 +12,10 @@ func findWord(a string, b string) []int {
 	a = strings.ReplaceAll(a, "?", "")
 	a = strings.ReplaceAll(a, ".", "")
 	a = strings.ReplaceAll(a, ",", "")
+	a = strings.ReplaceAll(a, "!", "")
 	words := strings.Split(a, " ")
-	for i, _ := range words {
-		if words[i] == b {
+	for i, v := range words {
+		if v == b {
 			res = append(res, i+1)
 		}
 	}
